@@ -1,2 +1,2 @@
 #!/bin/sh
-exec "${PYTHON:-python}" "${0%/*}"/platforms/flower/main.py "$@"
+exec "${PYTHON:-python2}" "${0%/*}"/platforms/flower/main.py "$@"

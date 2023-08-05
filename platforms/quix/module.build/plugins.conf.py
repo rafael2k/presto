@@ -18,7 +18,7 @@ def libraries(binary='opera'):
     libs = default.libraries
     if binary.startswith('operapluginwrapper-'):
         libs += map(util.PkgConfig, ['x11'])
-        libs += [util.PkgConfig('gtk+-2.0', link=False)]
+        libs += [util.PkgConfig('gtk+-3.0', link=False)]
         libs += map(util.StandardLibrary, ['pthread', 'rt'])
         if config.targetPlatform.isLinux: # dlopen/dlsym/dlclose are in libc on FreeBSD
             libs += [util.StandardLibrary('dl')]

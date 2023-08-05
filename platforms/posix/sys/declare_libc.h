@@ -17,7 +17,7 @@
  */
 
 # if SYSTEM_ABS == YES
-#define op_abs(n)					abs(n)
+#define op_abs(n)					std::abs(n)
 # endif
 # if SYSTEM_ACOS == YES
 #define op_acos(x)					acos(x)

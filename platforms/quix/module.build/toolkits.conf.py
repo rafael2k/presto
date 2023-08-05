@@ -15,14 +15,8 @@ GTK3PkgConfig = 'pkg-config' # Workaround: the pkg-config tool to use for gtk+-3
 
 def libraries(binary='opera'):
     libs = default.libraries
-    if binary == 'liboperagtk2.so':
-        libs += map(util.PkgConfig, ['gtk+-unix-print-2.0', 'gtk+-2.0'])
-    elif binary == 'liboperagtk3.so':
-        GTK3PkgConfig = config.GTK3PkgConfig
-        libs += map(lambda lib: util.PkgConfig(lib, pkgConfig=GTK3PkgConfig), ['gtk+-unix-print-3.0', 'gtk+-3.0'])
-    elif binary == 'liboperakde4.so':
-        libs += [config.KDE4()]
-        libs += map(util.PkgConfig, ['QtGui', 'QtCore'])
+    GTK3PkgConfig = config.GTK3PkgConfig
+    libs += map(lambda lib: util.PkgConfig(lib, pkgConfig=GTK3PkgConfig), ['gtk+-unix-print-3.0', 'gtk+-3.0'])
     return libs
 
 class KDE4(util.Library):

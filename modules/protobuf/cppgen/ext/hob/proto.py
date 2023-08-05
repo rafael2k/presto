@@ -7,7 +7,6 @@ import textwrap
 from copy import copy
 from itertools import chain
 
-from distutils.version import StrictVersion
 from hob.utils import dump_docblock, parse_docblock
 import util
 

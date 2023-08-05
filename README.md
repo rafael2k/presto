@@ -8,12 +8,10 @@ This repository contains the Presto rendering engine, used up to Opera 12.
 
 ## build on linux
 
-1. apply `fix_flower_build.patch` from root of repository
-2. place curl sources to `modules`
-3. `./flower -v --without-kde4`
+1. place curl sources to `modules`
+2. `./flower -v --without-kde4`
 
-On 64-bit systems, you may need build plugin-wrapper manually.
+On x86_64 systems, you may need build plugin-wrapper manually. No
+support yet for arm64.
 
 See `flower` output with `-j1` for additional info
-
-Original patch borrowed from http://paste.fedoraproject.org/526781/32598714/
