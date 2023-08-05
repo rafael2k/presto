@@ -46,8 +46,8 @@ X11MdeBuffer::X11MdeBuffer(X11Types::Display *display,
 	,m_window(window)
 	,m_widget(g_x11->GetWidgetList()->FindWidget(window))
 	,m_visual(visual)
-	,m_gc(None)
-	,m_plugin_gc(None)
+	,m_gc(NULL)
+	,m_plugin_gc(NULL)
 {
 }
 

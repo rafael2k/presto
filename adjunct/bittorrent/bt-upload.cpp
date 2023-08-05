@@ -517,14 +517,14 @@ OpByteBuffer *UploadTransferBT::OnRequest(BTPacket* packet)
 		DEBUGTRACE_UP(UNI_L("ILLEGAL length: %d\n"), length);
 		// error, too large request
 		Close();
-		return FALSE;
+		return NULL;
 	}
 	if(offset + length > m_filesize )
 	{
 		DEBUGTRACE_UP(UNI_L("ILLEGAL size: %d\n"), offset + length);
 		// error, size larger than file
 		Close();
-		return FALSE;
+		return NULL;
 	}
 
 	for(P2PFilePart* fragment = m_requested ; fragment != NULL; fragment = fragment->m_next )

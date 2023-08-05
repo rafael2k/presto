@@ -2368,9 +2368,9 @@ cmsStage* ReadSetOfCurves(struct _cms_typehandler_struct* self, cmsIOHANDLER* io
     cmsUInt32Number i;
     cmsStage* Lin = NULL;
 
-    if (nCurves > cmsMAXCHANNELS) return FALSE;
+    if (nCurves > cmsMAXCHANNELS) return NULL;
 
-    if (!io -> Seek(io, Offset)) return FALSE;
+    if (!io -> Seek(io, Offset)) return NULL;
 
     for (i=0; i < nCurves; i++) 
         Curves[i] = NULL;
@@ -5082,7 +5082,7 @@ void *Type_Dictionary_Read(struct _cms_typehandler_struct* self, cmsIOHANDLER* i
         if (DisplayNameMLU != NULL) cmsMLUfree(DisplayNameMLU);
         if (DisplayValueMLU != NULL) cmsMLUfree(DisplayValueMLU);
 
-        if (!rc) return FALSE;
+        if (!rc) return NULL;
     }
 
    FreeArray(&a);   

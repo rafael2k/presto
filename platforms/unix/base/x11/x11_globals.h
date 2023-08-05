@@ -33,7 +33,7 @@ public:
 		:visual(0)
 		,id(None)
 		,colormap(None)
-		,fbconfig(None)
+		,fbconfig(NULL)
 		,depth(0)
 		,image_bpp(0)
 		,r_mask(0)

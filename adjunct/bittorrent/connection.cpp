@@ -1551,7 +1551,7 @@ BTClientConnector *BTServerConnector::VerifyHandshake(OpByteBuffer& buffer, P2PS
 
 	if(buffer.DataSize() < 7)
 	{
-		return FALSE;
+		return NULL;
 	}
 	// Check for BitTorrent handshake
 

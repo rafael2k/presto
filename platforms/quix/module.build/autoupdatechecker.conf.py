@@ -9,7 +9,7 @@ def libraries(binary='opera'):
     if binary == 'opera_autoupdatechecker':
         # Use system libs
         libs.append(util.PkgConfig('sqlite3'))
-        libs.append(util.PkgConfig('tinyxml', static=True))
+        libs.append(util.PkgConfig('tinyxml'))
         libs.append(util.PkgConfig('libcurl'))
     return libs
 
